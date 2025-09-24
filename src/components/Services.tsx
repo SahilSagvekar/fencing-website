@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Home, Building, Shield, Hammer, Wrench, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import privacyFence from "@/assets/privacy-fence.jpg";
 import commercialFence from "@/assets/commercial-fence.jpg";
 import vinylFence from "@/assets/vinyl-fence.jpg";
@@ -129,12 +130,14 @@ export const Services = () => {
 
         {/* CTA */}
         <div className="text-center animate-fade-in">
-          <Button 
-            size="lg" 
-            className="bg-hero-gradient hover:shadow-accent text-lg px-8 py-6"
-          >
-            Get Your Free Quote Today
-          </Button>
+          <Link to="/contact">
+            <Button 
+              size="lg" 
+              className="bg-hero-gradient hover:shadow-accent text-lg px-8 py-6"
+            >
+              Get Your Free Quote Today
+            </Button>
+          </Link>
           <p className="text-sm text-muted-foreground mt-4">
             No obligation • Professional consultation • Fast response
           </p>

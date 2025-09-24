@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Shield, Award, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-fence-installation.jpg";
 
 export const Hero = () => {
@@ -50,12 +51,14 @@ export const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-hero-gradient hover:shadow-accent text-lg px-8 py-6 animate-glow"
-              >
-                Get Free Estimate
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-hero-gradient hover:shadow-accent text-lg px-8 py-6 animate-glow"
+                >
+                  Get Free Estimate
+                </Button>
+              </Link>
               <Button 
                 variant="outline" 
                 size="lg" 

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Award, Clock, Users, CheckCircle, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const stats = [
   { number: "500+", label: "Satisfied Customers", icon: Users },
@@ -65,19 +66,23 @@ export const About = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-hero-gradient hover:shadow-accent text-lg px-8 py-6"
-              >
-                Request Free Consultation
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6"
-              >
-                View Our Portfolio
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-hero-gradient hover:shadow-accent text-lg px-8 py-6"
+                >
+                  Request Free Consultation
+                </Button>
+              </Link>
+              <Link to="/services">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6"
+                >
+                  View Our Services
+                </Button>
+              </Link>
             </div>
           </div>
 

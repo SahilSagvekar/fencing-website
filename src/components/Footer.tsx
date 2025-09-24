@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   "Residential Fencing",
@@ -48,12 +49,14 @@ export const Footer = () => {
                 <span className="text-sm text-primary-foreground/80">5.0 Rating</span>
               </div>
               
-              <Button 
-                variant="outline" 
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              >
-                Get Free Quote
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  variant="outline" 
+                  className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                >
+                  Get Free Quote
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -63,12 +66,12 @@ export const Footer = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service}>
-                  <a 
-                    href="#" 
+                  <Link 
+                    to="/services" 
                     className="text-primary-foreground/80 hover:text-primary-foreground smooth-transition text-sm"
                   >
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
