@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "rootDirectory": "frontend",
   "builds": [
     {
       "src": "vite.config.ts",
@@ -11,13 +12,7 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
