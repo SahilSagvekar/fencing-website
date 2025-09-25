@@ -8,7 +8,6 @@ export default async function handler(req, res) {
   try {
     const { firstName, lastName, phone, email, zip, message } = req.body;
 
-    // Configure transporter inside function (serverless best practice)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
